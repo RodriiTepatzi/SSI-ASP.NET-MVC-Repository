@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SSI_WebApp.Areas.Admin.Controllers
 {
-    public class Repair : Controller
+    public class RepairController : Controller
     {
         public IActionResult Index()
         {
