@@ -1,0 +1,174 @@
+/*You can add your won color also */
+a {
+    color: #0098DA;
+}
+
+a:hover {
+  color: #1b7bc7;
+}
+
+.section-titile-bg {
+    color: #0098DA;
+}
+.section-title::before {
+    background-color: #0098DA;
+}
+.subtitle {
+    color: #0098DADA;
+}
+.btn-common {
+    background: #0098DA;
+}
+
+.btn-common:hover, .btn-common:focus {
+  background: #1b7bc7 !important;
+}
+
+.btn-round {
+    background: #0098DA !important;
+}
+
+.btn-round:hover {
+  background: #1b7bc7 !important;
+}
+
+/* ScrollToTop */
+a.back-to-top i {
+    background-color: #0098DA;
+}
+
+
+.slicknav_btn {
+    border-color: #0098DA;
+}
+.slicknav_menu .slicknav_icon-bar {
+    background: #0098DA;
+}
+    .slicknav_menu .slicknav_icon-bar:hover {
+        background: #0098DA;
+    }
+.navbar li.active a.nav-link{
+  color: #0098DA!important;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+  color: #0098DA!important;
+}
+.dropdown .dropdown-item:focus, .dropdown .dropdown-item:hover{
+  color: #0098DA;
+}
+.dropdown .dropdown-menu .dropdown-item.active, .dropdown .dropdown-menu .dropdown-item:active{
+  color: #0098DA;
+  background-color: #fafafa;
+}
+.work-counter-widget i {
+  color: #0098DA;
+}
+.portfolio-nav ul.nav li a:hover,
+.portfolio-nav ul.nav li a.active{
+  background: #0098DA;
+}
+.about-single i {
+  color: #0098DA;
+}
+
+.about-single:hover i {
+  background: #0098DA;
+}
+.Material-tab ul.nav.nav-tabs li .active{
+  background: #0098DA !important;
+}
+.single-blog-post .post-meta a:hover {
+  color: #0098DA;
+}
+
+.contact-widget-section .single-contact-widget i {
+  color: #0098DA;
+}
+
+.single-service-widget i {
+  color: #0098DA;
+}
+#testimonial-carousel .owl-pagination .owl-page.active span {
+  background: #0098DA;
+}
+
+.form-submit button.btn-common.disabled {
+  background: #0098DA !important;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.owl-carousel .owl-controls .owl-page.active span {
+  border: none;
+  background: #fff !important;
+  opacity: 1;
+}
+
+.Material-tab-default ul.nav.nav-tabs li.active a {
+  color: #0098DA;
+}
+
+.Material-default-accordion .panel-default .panel-heading a {
+  background-color: #0098DA;
+}
+
+.icon-round, .icon-box {
+  background: #0098DA;
+}
+
+.icon-common {
+  color: #0098DA;
+}
+
+.price span {
+  color: #0098DA;
+}
+
+.pricing-button a.btn-pricing {
+  background-color: #0098DA;
+}
+
+.Material-error-section h1 {
+  color: #0098DA;
+}
+
+.comment-box .form-control, .comment-box textarea {
+  font-weight: 500;
+  color: #0098DA;
+}
+
+.find-widget {
+  padding: 10px 0;
+}
+
+.find-widget i {
+  background: #0098DA;
+}
+.footer-widget-container{
+  border-top: 4px solid #0098DA;
+}
+ul.footer-contact li span{
+  background: #0098DA;
+}
+.footer-contact ul li i{
+  background: #0098DA;
+  border-color: #0098DA;
+}
+.page-footer .link-widget ul li a:hover{
+  color: #0098DA;
+}
+.page-footer .recent-widget p a:hover{
+  color: #0098DA;
+}
+
+.form-group.is-focused .form-control {
+    outline: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0098DA), to(#0098DA)),
+    -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+    background-image: -webkit-linear-gradient(#0098DA, #0098DA), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: -o-linear-gradient(#0098DA, #0098DA), -o-linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: linear-gradient(#0098DA, #0098DA), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.page-footer .footer-title::before{
+  background: #0098DA;
+}

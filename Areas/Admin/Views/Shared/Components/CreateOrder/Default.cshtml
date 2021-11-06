@@ -1,0 +1,56 @@
+﻿@using SSI_WebApp.Data.ViewModels;
+@using SSI_WebApp.Data.Enums;
+@model NewOrderVM
+@{
+    ViewData["Title"] = "Create a new Order";
+}
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h4>@Messages.ES.CreateOrderTitle</h4>
+        </p>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="ComputerModel" class="control-label"></label>
+                        <input asp-for="ComputerModel" class="form-control" />
+                        <span asp-validation-for="ComputerModel" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ComputerBrand" class="control-label"></label>
+                        <input asp-for="ComputerBrand" class="form-control" />
+                        <span asp-validation-for="ComputerBrand" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SerialNumber" class="control-label"></label>
+                        <input asp-for="SerialNumber" class="form-control" />
+                        <span asp-validation-for="SerialNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Price" class="control-label"></label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ReceptionDate" class="control-label"></label>
+                        <input asp-for="ReceptionDate" class="form-control" />
+                        <span asp-validation-for="ReceptionDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Notes" class="control-label"></label>
+                        <textarea asp-for="Notes" class="form-control"></textarea>
+                        <span asp-validation-for="Notes" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-outline-success float-right" />
+                <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+            </div>
+        </form>
+    </div>
+</div>

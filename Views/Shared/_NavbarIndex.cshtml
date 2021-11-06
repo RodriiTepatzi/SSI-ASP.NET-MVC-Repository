@@ -1,0 +1,105 @@
+﻿@using SSI_WebApp.Data.Enums  
+
+<nav class="navbar navbar-expand-lg fixed-top scrolling-navbar nav-bg">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="mdi mdi-menu"></span>
+                <span class="mdi mdi-menu"></span>
+                <span class="mdi mdi-menu"></span>
+            </button>
+            <a class="navbar-brand" asp-action="Index" asp-controller="Home"><img src="~/assets/images/logoLabcom.svg" alt="Logo"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                <li class="nav-item active">
+                    <a class="nav-link" asp-action="Index" asp-controller="Home">
+                        @Messages.ES.HomeNav
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @Messages.ES.HomeNavServices
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="about-us.html">@Messages.ES.HomeNavService1</a>
+                        <a class="dropdown-item" href="about-us2.html">@Messages.ES.HomeNavService2</a>
+                        <a class="dropdown-item" href="team.html">@Messages.ES.HomeNavService3</a>
+                        <a class="dropdown-item" href="services.html">@Messages.ES.HomeNavService4</a>
+                        <a class="dropdown-item" href="contact-us.html">@Messages.ES.HomeNavService5</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        @Messages.ES.HomeNavShop
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Contact" asp-controller="Home">
+                        @Messages.ES.HomeNavContact
+                    </a>
+                </li>
+            </ul>
+            <!-- Search Box Start -->
+            <div class="search-icon">
+                <span class="open-search">
+                    <i class="mdi mdi-magnify btn btn-common"></i>
+                </span>
+            </div>
+            <form role="search" class="navbar-form">
+                <div class="container">
+                    <div class="row">
+                        <div class="form-group has-feedback">
+                            <input type="text" placeholder="Type and search ..." class="form-control">
+                            <div class="close"><i class="mdi mdi-close"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- Search Box End -->
+        </div>
+    </div>
+    <!-- Mobile Menu Start -->
+    <ul class="wpb-mobile-menu">
+        <li>
+            <a class="active" href="index.html">
+                @Messages.ES.HomeNav
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                @Messages.ES.HomeNavServices
+            </a>
+            <ul class="dropdown">
+                <li>
+                    <a href="about-us.html">@Messages.ES.HomeNavService1</a>
+                </li>
+                <li>
+                    <a href="about-us2.html">@Messages.ES.HomeNavService2</a>
+                </li>
+                <li>
+                    <a href="team.html">@Messages.ES.HomeNavService3</a>
+                </li>
+                <li>
+                    <a href="services.html">@Messages.ES.HomeNavService4</a>
+                </li>
+                <li>
+                    <a href="contact-us.html">@Messages.ES.HomeNavService5</a>
+                </li>
+            </ul>
+        </li> 
+        <li>
+            <a href="#">
+                @Messages.ES.HomeNavShop
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                @Messages.ES.HomeNavContact
+            </a>
+        </li>
+    </ul>
+    <!-- Mobile Menu End -->
+</nav>

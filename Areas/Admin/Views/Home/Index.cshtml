@@ -1,0 +1,15 @@
+﻿@model ApplicationUser;
+@{
+    ViewData["Title"] = "Admin Login";
+}
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+    
+}
+else
+{
+    <script>
+        window.location.href = "@Url.Action("Login")";
+    </script>
+}
+

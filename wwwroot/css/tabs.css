@@ -1,0 +1,70 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+[hidden] {
+    display: none;
+    /* visibility: hidden;
+        opacity: 1; */
+}
+
+
+#wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 80vw;
+    min-width: 430px;
+    margin: 0 auto;
+}
+
+.tabs {
+    width: 100%;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.tab-control {
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    font-size: 1.25rem;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+    .tab-control:hover {
+        color: #ed1e79;
+    }
+
+.tab-panel {
+    display: none;
+}
+
+/* Magic style */
+input[type="radio"]:checked + .tab-control {
+    font-weight: 600;
+    color: #ed1e79;
+    border-bottom-color: #ed1e79;
+}
+
+#tab-1:checked ~ .tab-content > #tab-panel-1 {
+    display: block;
+}
+
+#tab-2:checked ~ .tab-content > #tab-panel-2 {
+    display: block;
+}
+
+#tab-3:checked ~ .tab-content > #tab-panel-3 {
+    display: block;
+}

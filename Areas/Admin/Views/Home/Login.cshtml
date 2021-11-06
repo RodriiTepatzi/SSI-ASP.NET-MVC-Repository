@@ -1,0 +1,40 @@
+﻿@using SSI_WebApp.Data.ViewModels;
+@model LoginVM;
+@{
+    Layout = "_LoginLayout";
+    ViewData["Title"] = "Admin Login";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <script>
+            window.location.href = "@Url.Action("Index")";
+    </script>
+}
+else
+{
+    <div class="form">
+        @if (TempData["Error"] != null)
+        {
+            <span><b>Sorry!</b> - @TempData["Error"] </span>
+        }
+            <div class="form-box">
+                <div class="form-left">
+                    <div class="form-padding"><img class="form-image" src="~/img//admin.png"/></div>
+                </div>
+                <div class="form-right">
+                    <div class="form-padding-right">
+                        <form asp-action="Login">
+                            <h1 class="form-title">Admin Login</h1>
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input asp-for="EmailAddress" class="form-email" type="text" placeholder="Email" />
+                            <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                            <input asp-for="Password" class="form-password" type="password" placeholder="******" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                            <input class="form-submit-btn" type="submit" value="Login" asp-action="Login" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+}

@@ -1,0 +1,34 @@
+﻿@using SSI_WebApp.Data.ViewModels;
+@model LoginVM;
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Admin Login";
+}
+
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <partial name="/Areas/Admin/Views/Shared/_Sidebar.cshtml" model="@ViewData["ViewName"]" />
+
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <partial name="/Areas/Admin/Views/Shared/_Topbar.cshtml" />
+        </div>
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Your Website 2021</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+    </div>
+    <!-- End of Content Wrapper -->
+}
+else
+{
+    <script>
+        window.location.href = "@Url.Action("Login")";
+    </script>
+}
+

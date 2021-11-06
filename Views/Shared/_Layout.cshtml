@@ -1,0 +1,148 @@
+﻿@using SSI_WebApp.Data.Enums
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>SSI</title>
+
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/assets/css/material.min.css">
+    <link rel="stylesheet" href="~/assets/css/ripples.min.css">
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/assets/css/slicknav.css">
+    <link rel="stylesheet" href="~/assets/css/animate.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/colors/blue.css" media="screen" />
+</head>
+<body>
+
+    <!-- Header Start -->
+    <header id="header">
+        <partial name="/Views/Shared/_NavbarIndex.cshtml" />
+    </header>
+
+    @RenderBody()
+
+    <!--Footer-->
+    <footer class="page-footer center-on-small-only  pt-0 footer-widget-container">
+        <!--Footer Links-->
+        <div class="container pt-5 mb-5">
+            <div class="row">
+                <!--First column-->
+                <div class="col-md-6 col-lg-3 col-xl-3 footer-contact-widget">
+                    <h3 class="footer-title">@Messages.ES.AboutTitle</h3>
+                    <p>@Messages.ES.AboutMessage</p>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="mdi mdi-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="mdi mdi-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="mdi mdi-dribbble"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="mdi mdi-github-circle"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="mdi mdi-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.First column-->
+                <!--Second column-->
+                <div class="col-md-6 col-lg-3 col-xl-3 recent-widget">
+                    <h3 class="footer-title">Recent Posts</h3>
+                    <p><a href="#" class="dark-grey-text">Growth Hacking 101</a></p>
+                    <p><a href="#" class="dark-grey-text">30 UX Tips and Tricks</a></p>
+                    <p><a href="#" class="dark-grey-text">How to Scale Your Business</a></p>
+                    <p><a href="#" class="dark-grey-text">Getting Started with Sketch</a></p>
+                    <p><a href="#" class="dark-grey-text"></a>10 Tips to Validate Your Idea</p>
+                    <p><a href="#" class="dark-grey-text">SEO Guideline for Designers</a></p>
+                </div>
+                <!--/.Second column-->
+                <!--Third column-->
+                <div class="col-md-6 col-lg-3 col-xl-3 link-widget">
+                    <h3 class="footer-title">@Messages.ES.QuickAccess</h3>
+                    <ul>
+                        <li><a asp-action="Index" asp-controller="Home">@Messages.ES.HomeNav</a></li>
+                        <li><a href="#">@Messages.ES.HomeNavShop</a></li>
+                        <li><a asp-action="Contact" asp-controller="Home">@Messages.ES.HomeNavContact</a></li>
+                        <li><a asp-action="Contact" asp-controller="Home">@Messages.ES.HomeNavServices</a></li>
+                    </ul>
+                </div>
+                <!--/.Third column-->
+                <!--Fourth column-->
+                <div class="col-md-6 col-lg-3 col-xl-3 footer-contact">
+                    <h3 class="footer-title">Our Gallery</h3>
+                    <div class="widget widget-gallery">
+                        <ul class="magnific-gallery">
+                            <li><a href="#"><img src="assets/images/gallery/thum1.jpg" alt="instagram image"></a></li>
+                            <li><a href="#"><img src="assets/images/gallery/thum2.jpg" alt="instagram image"></a></li>
+                            <li><a href="#"><img src="assets/images/gallery/thum3.jpg" alt="instagram image"></a></li>
+                            <li><a href="#"><img src="assets/images/gallery/thum4.jpg" alt="instagram image"></a></li>
+                            <li><a href="#"><img src="assets/images/gallery/thum5.jpg" alt="instagram image"></a></li>
+                            <li><a href="#"><img src="assets/images/gallery/thum6.jpg" alt="instagram image"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.Fourth column-->
+
+            </div>
+        </div>
+        <!--/.Footer Links-->
+        <!-- Copyright-->
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>&copy; 2021 LABCOM, Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.Copyright -->
+
+    </footer>
+    <!--/.Footer-->
+    <!-- Back To Top -->
+    <a href="#" class="back-to-top">
+        <div class="ripple-container"></div>
+        <i class="mdi mdi-arrow-up">
+        </i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader" id="loader-1"></div>
+    </div>
+    <!-- End Preloader -->
+    <!-- Optional JavaScript -->
+    <script src="~/assets/js/jquery-min.js"></script>
+    <script src="~/assets/js/popper.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/jquery.mixitup.min.js"></script>
+    <script src="~/assets/js/jquery.inview.js"></script>
+    <script src="~/assets/js/jquery.counterup.min.js"></script>
+    <script src="~/assets/js/scroll-top.js"></script>
+    <script src="~/assets/js/smoothscroll.js"></script>
+    <script src="~/assets/js/material.min.js"></script>
+    <script src="~/assets/js/ripples.min.js"></script>
+    <script src="~/assets/js/owl.carousel.min.js"></script>
+    <script src="~/assets/js/form-validator.min.js"></script>
+    <script src="~/assets/js/contact-form-script.min.js"></script>
+    <script src="~/assets/js/wow.js"></script>
+    <script src="~/assets/js/jquery.vide.js"></script>
+    <script src="~/assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/assets/js/jquery.slicknav.js"></script>
+    <script src="~/assets/js/main.js"></script>
+
+</body>
+</html>

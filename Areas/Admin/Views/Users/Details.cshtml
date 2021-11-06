@@ -1,0 +1,75 @@
+﻿@model ApplicationUser;
+@{
+    ViewData["Title"] = "Admin Login";
+}
+
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+
+            <div class="container-fluid">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Detalles de @Model.FullName</h6>
+                    </div>
+                    <div class="card-body">
+                        <form class="user">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <label asp-for="@Model.FullName" class="label"></label>
+                                    <input asp-for="@Model.FullName" class="form-control form-control-user" disabled />
+                                </div>
+                                <div class="col-sm-6">
+                                    <label asp-for="@Model.UserName" class="label"></label>
+                                    <input asp-for="@Model.UserName" class="form-control form-control-user" disabled />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="@Model.ProfilePicture" class="label"></label>
+                                <input asp-for="@Model.ProfilePicture" class="form-control form-control-user" disabled />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="@Model.Email" class="label"></label>
+                                <input asp-for="@Model.Email" class="form-control form-control-user" disabled />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="@Model.PhoneNumber" class="label"></label>
+                                <input asp-for="@Model.PhoneNumber" class="form-control form-control-user" disabled />
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <label asp-for="@Model.StreetName" class="label"></label>
+                                    <input asp-for="@Model.StreetName" class="form-control form-control-user" disabled />
+                                </div>
+                                <div class="col-sm-6">
+                                    <label asp-for="@Model.CityName" class="label"></label>
+                                    <input asp-for="@Model.CityName" class="form-control form-control-user" disabled />
+                                </div>
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <label asp-for="@Model.StateName" class="label"></label>
+                                    <input asp-for="@Model.StateName" class="form-control form-control-user" disabled />
+                                </div>
+                                <div class="col-sm-6">
+                                    <label asp-for="@Model.ZipCode" class="label"></label>
+                                    <input asp-for="@Model.ZipCode" class="form-control form-control-user" disabled />
+                                </div>
+                            </div>
+                        </form>
+                        <div class="form-group">
+                            <a class="btn btn-info" asp-action="Edit" asp-controller="Users" asp-route-id="@Model.Id">
+                                <i class="fas fa-edit"> Editar</i>
+                            </a>
+                            <a class="btn btn-primary float-right" asp-action="@(ViewData["ViewName"].ToString() == "Users-admins" ? "Admins" : "")@(ViewData["ViewName"].ToString() == "Users-users" ? "Users" : "")" asp-controller="Users">
+                                <i class="fas fa-eye"> Volver</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+}
+else
+{
+    <script>
+        window.location.href = "@Url.Action("Login")";
+    </script>
+}

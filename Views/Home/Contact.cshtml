@@ -1,0 +1,68 @@
+﻿@using SSI_WebApp.Data.Enums         
+    <!-- Contact Us Section -->
+    <section class="Material-contact-section section-padding section-dark">
+        <div class="container">
+            <div class="row">
+                <!-- Section Titile -->
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1> </h1><br /> <br />
+                    <h1 class="section-title">@Messages.ES.ContactSubtitle</h1>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Section Titile -->
+                <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <p>@Messages.ES.ContactDescription</p>
+
+                    <div class="find-widget">
+                        <a href="#"><i class="material-icons mdi mdi-map-marker"></i>Av. Francisco I. Madero #150, Contla</a>
+                    </div>
+                    <div class="find-widget">
+                        <a href="#"><i class="material-icons mdi mdi-phone"></i> +52 (246)-123-86</a>
+                    </div>
+                    <div class="find-widget">
+                        <a href="#"><i class="material-icons mdi mdi-email-open mr-3"></i> support@support.com</a>
+                    </div>
+                    <div class="find-widget">
+                        <a href="#"><i class="material-icons mdi mdi-clock"></i> @Messages.ES.ContactSchedule</a>
+                    </div>
+                </div>
+                <!-- contact form -->
+                <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+                    <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+                        <!-- Name -->
+                        <div class="form-group label-floating">
+                            <label class="control-label" for="name">@Messages.ES.FormNamePlaceholder</label>
+                            <input class="form-control" id="name" type="text" name="name" required data-error="@Messages.ES.FormNameValidator">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- email -->
+                        <div class="form-group label-floating">
+                            <label class="control-label" for="email">@Messages.ES.FormEmailPlaceholder</label>
+                            <input class="form-control" id="email" type="email" name="email" required data-error="@Messages.ES.FormEmailValidator">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Subject -->
+                        <div class="form-group label-floating">
+                            <label class="control-label">@Messages.ES.FormSubjectPlaceholder</label>
+                            <input class="form-control" id="msg_subject" type="text" name="subject" required data-error="@Messages.ES.FormSubjectValidator">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Message -->
+                        <div class="form-group label-floating">
+                            <label for="message" class="control-label">@Messages.ES.FormMessagePlaceholder</label>
+                            <textarea class="form-control" rows="3" id="message" name="message" required data-error="@Messages.ES.FormMessageValidator"></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Form Submit -->
+                        <div class="form-submit mt-5">
+                            <button class="btn btn-common" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> @Messages.ES.SendMessageButton</button>
+                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Us Section End -->
