@@ -1,4 +1,5 @@
-﻿using SSI_WebApp.Data.Base;
+﻿using Microsoft.EntityFrameworkCore;
+using SSI_WebApp.Data.Base;
 using SSI_WebApp.Data.ViewModels;
 using SSI_WebApp.Models;
 using System;
@@ -40,6 +41,16 @@ namespace SSI_WebApp.Data.Services
         public Task UpdateAsync(FixOrder fixOrder)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<OrderDropdownsVM> GetOrderDropdownsValues()
+        {
+            var response = new OrderDropdownsVM()
+            {
+                ComputerBrands = await _context.ComputerBrands.OrderBy(n => n.Name).ToListAsync(),
+            };
+
+            return response;
         }
     }
 }

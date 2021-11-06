@@ -13,5 +13,6 @@ namespace SSI_WebApp.Data.Services
         Task<FixOrder> GetOrderByIdAsync(int id);
         Task AddNewOrderAsync(NewOrderVM fixOrder);
         Task UpdateAsync(FixOrder fixOrder);
+        Task<OrderDropdownsVM> GetOrderDropdownsValues();
     }
 }

@@ -36,16 +36,16 @@
                         <tbody>
                             @foreach (var n in Model)
                             {
-                            <tr>
-                                <td>@n.ComputerBrand</td>
-                                <td>@n.ComputerModel</td>
-                                <td>@n.Fixed</td>
-                                <td>@n.ReceptionDate</td>
-                                <td class="text-center">
-                                    <a class="btn btn-circle btn-sm btn-info" asp-action="Details" asp-controller="Repair" asp-route-id="@n.Id"><i class="fas fa-info"></i></a>
-                                    <a class="btn btn-circle btn-sm btn-info" asp-action="Edit" asp-controller="Repair" asp-route-id="@n.Id"><i class="fas fa-edit"></i></a>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>@n.ComputerBrand</td>
+                                    <td>@n.ComputerModel</td>
+                                    <td>@n.Fixed</td>
+                                    <td>@n.ReceptionDate</td>
+                                    <td class="text-center">
+                                        <a class="btn btn-circle btn-sm btn-info" asp-action="Details" asp-controller="Repair" asp-route-id="@n.Id"><i class="fas fa-info"></i></a>
+                                        <a class="btn btn-circle btn-sm btn-info" asp-action="Edit" asp-controller="Repair" asp-route-id="@n.Id"><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
                             }
                         </tbody>
                     </table>
@@ -54,7 +54,7 @@
         </div>
     </div>
     <!-- END TABLE -->
-
+    <partial name="/Areas/Admin/Views/Shared/_CreateButton.cshtml" model="@("Repair")" />
 }
 else
 {
