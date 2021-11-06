@@ -11,13 +11,29 @@ namespace SSI_WebApp.Models
     {
         [Key]
         public int Id { get; set; }
+
+        [Display(Name = "Modelo")]
         public string ComputerModel { get; set; }
+
+        [Display(Name = "Marca")]
         public string ComputerBrand { get; set; }
+
+        [Display(Name = "Número de serie")]
         public string SerialNumber { get; set; }
+
+        [Display(Name = "Entrada")]
         public DateTime ReceptionDate { get; set; }
+
+        [Display(Name = "Salida")]
         public DateTime PickDate { get; set; }
+
+        [Display(Name = "¿Reparado?")]
         public bool Fixed { get; set; }
+
+        [Display(Name = "Notas")]
         public string Notes { get; set; }
+
+        [Display(Name = "Precio")]
         public string Price { get; set; }
 
         //Relationships
