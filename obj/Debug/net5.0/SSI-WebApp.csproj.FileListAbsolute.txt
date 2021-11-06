@@ -406,3 +406,4 @@ C:\Users\sprno\source\repos\SSI-WebApp\obj\Debug\net5.0\SSI-WebApp.dll
 C:\Users\sprno\source\repos\SSI-WebApp\obj\Debug\net5.0\ref\SSI-WebApp.dll
 C:\Users\sprno\source\repos\SSI-WebApp\obj\Debug\net5.0\SSI-WebApp.pdb
 C:\Users\sprno\source\repos\SSI-WebApp\obj\Debug\net5.0\SSI-WebApp.genruntimeconfig.cache
+C:\Users\sprno\source\repos\SSI-WebApp\obj\Debug\net5.0\SSI-WebApp.csproj.AssemblyReference.cache

@@ -38,8 +38,25 @@
         </div>
     </li>
 
-
+    <hr class="sidebar-divider">
     <!-- Divider -->
+    <div class="sidebar-heading">
+        Compúto
+    </div>
+    <li class="nav-item @(Model == "Computo-orders" || Model == "Computo-config" ? "active" : "")">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCompOrders"
+           aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-laptop"></i>
+            <span>Reparaciones</span>
+        </a>
+        <div id="collapseCompOrders" class="collapse @(Model == "Computo-orders" || Model == "Computo-config" ? "show" : "")" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Acción:</h6>
+                <a class="collapse-item @(Model == "Computo-orders" ? "active" : "")" asp-action="Orders" asp-controller="Repair">Ordenes</a>
+                <a class="collapse-item @(Model == "Computo-config" ? "active" : "")" asp-action="Config" asp-controller="Repair">Configuración</a>
+            </div>
+        </div>
+    </li>
 
     <hr class="sidebar-divider">
     <!-- Heading -->
