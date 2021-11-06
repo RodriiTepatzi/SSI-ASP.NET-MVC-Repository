@@ -1,4 +1,4 @@
-﻿@model UserDisplayVM;
+﻿@model IEnumerable<FixOrder>
 @{
 
     ViewData["Title"] = "Admin Login";
@@ -17,32 +17,35 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Nombre</th>
-                                <th>Usuario</th>
-                                <th>Email</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Reparado</th>
+                                <th>Fecha de entrada</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>Nombre</th>
-                                <th>Usuario</th>
-                                <th>Email</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Reparado</th>
+                                <th>Fecha de entrada</th>
                                 <th>Actions</th>
                             </tr>
                         </tfoot>
                         <tbody>
-                            @foreach (var n in Model.Users)
+                            @foreach (var n in Model)
                             {
-                                <tr>
-                                    <td>@n.FullName</td>
-                                    <td>@n.UserName</td>
-                                    <td>@n.Email</td>
-                                    <td class="text-center">
-                                        <a class="btn btn-circle btn-sm btn-info" asp-action="Details" asp-controller="Users" asp-route-id="@n.Id"><i class="fas fa-info"></i></a>
-                                        <a class="btn btn-circle btn-sm btn-danger" asp-action="Delete" asp-controller="Users" asp-route-id="@n.Id"><i class="fas fa-trash"></i></a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>@n.ComputerBrand</td>
+                                <td>@n.ComputerModel</td>
+                                <td>@n.Fixed</td>
+                                <td>@n.ReceptionDate</td>
+                                <td class="text-center">
+                                    <a class="btn btn-circle btn-sm btn-info" asp-action="Details" asp-controller="Repair" asp-route-id="@n.Id"><i class="fas fa-info"></i></a>
+                                    <a class="btn btn-circle btn-sm btn-info" asp-action="Edit" asp-controller="Repair" asp-route-id="@n.Id"><i class="fas fa-edit"></i></a>
+                                </td>
+                            </tr>
                             }
                         </tbody>
                     </table>
