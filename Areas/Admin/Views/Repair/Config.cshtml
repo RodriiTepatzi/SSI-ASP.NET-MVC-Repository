@@ -1,16 +1,61 @@
-﻿@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+﻿@model RepairOrdersConfig
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
 {
-<div class="container-fluid">
-    <h5>Configuración</h5>
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Ordenes</h6>
+    <div class="container-fluid">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Configuración ordenes</h6>
+            </div>
+            <div class="card-body">
+                <form class="user" asp-action="Create" asp-controller="Repair">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <label class="label">Marcas</label>
+                            <select class="form-control form-control-user" asp-items="ViewBag.Brands"></select>
+                            <div>
+                                <br />
+                                <a class="btn btn-circle btn-sm btn-success" href="#" data-toggle="modal" data-target="#newBrandModal">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                                <a class="btn btn-circle btn-sm btn-danger"><i class="fa fa-minus"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label asp-for="NotifyClientEmail" class="label"></label>
+                            <input asp-for="NotifyClientEmail" class="form-control form-control-user" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label asp-for="NotifyClientEmail" class="label"></label>
+                        <input asp-for="NotifyClientEmail" class="form-control form-control-user" />
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">
+                            Guardar
+                        </button>
+                        <a class="btn btn-danger float-right" asp-action="Index" asp-controller="Home">
+                            <i class="fa fa-cancel"></i> Cancelar
+                        </a>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="card-body">
-            The styling for this basic card example is created by using default Bootstrap
-            utility classes. By using utility classes, the style of the card component can be
-            easily modified with no need for any custom CSS!
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Configuración notificaciones</h6>
+            </div>
+            <div class="card-body">
+                The styling for this basic card example is created by using default Bootstrap
+                utility classes. By using utility classes, the style of the card component can be
+                easily modified with no need for any custom CSS!
+            </div>
         </div>
     </div>
-</div>
+
+
+    <partial name="/Areas/Admin/Views/Shared/Components/_CreateNewBrandComponent.cshtml" />
+    
 }
