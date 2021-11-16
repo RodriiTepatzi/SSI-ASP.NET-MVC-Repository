@@ -1,29 +1,30 @@
 ﻿@model ComputerBrand
 
-@if (User.IsInRole("Admin") && User.Identity.IsAuthenticated) { }
+@if (User.IsInRole("Admin") && User.Identity.IsAuthenticated) {
 <!-- New Brand Modal-->
 <div class="modal fade" id="newBrandModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Agregar nueva marca</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form class="user">
+            <form class="user" asp-action="CreateBrand" asp-controller="Repair">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar nueva marca</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
                     <div class="form-group">
                         <label class="form-label">Marca</label>
-                        <input class="form-control form-control-user" asp-for="Name"/>
+                        <input class="form-control" asp-for="Name" />
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
-                <a class="btn btn-success" asp-action="AddBrand" asp-controller="Repair">Agregar</a>
-            </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-success">Agregar</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

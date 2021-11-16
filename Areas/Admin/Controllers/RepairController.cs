@@ -15,31 +15,29 @@ namespace SSI_WebApp.Areas.Admin.Controllers
     public class RepairController : Controller
     {
         private readonly IFixOrdersService _service;
-        public RepairController(IFixOrdersService service)
+        private readonly IOrdersConfigService _ordersService;
+        public RepairController(IFixOrdersService service, IOrdersConfigService ordersService)
         {
             _service = service;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
+            _ordersService = ordersService;
         }
 
         public async Task<IActionResult> Create()
         {
             var dropdowns = await _service.GetOrderDropdownsValues();
             ViewBag.Brands = new SelectList(dropdowns.ComputerBrands, "Id", "Name");
+            ViewData["ViewName"] = "Computo-orders";
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(NewOrderVM order)
         {
-            if (!ModelState.IsValid) return View(order);
-            await _service.AddNewOrderAsync(order);
-
             var dropdowns = await _service.GetOrderDropdownsValues();
             ViewBag.Brands = new SelectList(dropdowns.ComputerBrands, "Id", "Name");
+
+            if (!ModelState.IsValid) return View(order);
+            await _service.AddNewOrderAsync(order);
 
             return RedirectToAction("Orders");
         }
@@ -47,6 +45,7 @@ namespace SSI_WebApp.Areas.Admin.Controllers
         public async Task<IActionResult> Orders()
         {
             var data = await _service.GetAllAsync();
+            ViewData["ViewName"] = "Computo-orders";
 
             return View(data);
         }
@@ -55,12 +54,46 @@ namespace SSI_WebApp.Areas.Admin.Controllers
         {
             var order = await _service.GetByIdAsync(id);
 
+            ViewData["ViewName"] = "Computo-orders";
             return View(order);
         }
 
-        public IActionResult Config()
+        public async Task<IActionResult> Config()
         {
+            var dropwdowns = await _service.GetOrderDropdownsValues();
+
+            ViewBag.Brands = new SelectList(dropwdowns.ComputerBrands, "Id", "Name");
+            ViewData["ViewName"] = "Computo-config";
+
+            var config = await _ordersService.GetAllAsync();
+
+            if (config.Count() > 0) 
+            {
+                var data = config.ToList().ElementAt(0);
+                return View(data);
+            }
+
             return View();
+            
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateBrand(ComputerBrand brand)
+        {
+            await _ordersService.CreateBrandAsync(brand);
+
+            return RedirectToAction("Config");
+        }
+
+        public async Task<IActionResult> DeleteBrand(DeleteBrandVM delete)
+        {
+            var data = await _ordersService.GetBrandByIdAsync(delete.Id);
+
+            if (data == null) return RedirectToAction("Config");
+
+            await _ordersService.DeleteBrandByIdAsync(delete.Id);
+
+            return RedirectToAction("Config");
         }
     }
 }

@@ -8,28 +8,28 @@
             </div>
             <div class="card-body">
                 <form class="user" asp-action="Create" asp-controller="Repair">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div asp-validation-summary="ModelOnly" class="text-danger" id="MessageError"></div>
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
                             <label class="label">Marcas</label>
-                            <select class="form-control form-control-user" asp-items="ViewBag.Brands"></select>
+                            <select class="form-control" asp-items="ViewBag.Brands" id="Brands"></select>
                             <div>
                                 <br />
                                 <a class="btn btn-circle btn-sm btn-success" href="#" data-toggle="modal" data-target="#newBrandModal">
                                     <i class="fa fa-plus"></i>
                                 </a>
-                                <a class="btn btn-circle btn-sm btn-danger"><i class="fa fa-minus"></i></a>
+                                <a class="btn btn-circle btn-sm btn-danger" asp-route-id="" id="deleteBrandButton"><i class="fa fa-minus"></i></a>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <label asp-for="NotifyClientEmail" class="label"></label>
-                            <input asp-for="NotifyClientEmail" class="form-control form-control-user" />
+                            <input asp-for="NotifyClientEmail" class="form-control" />
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <label asp-for="NotifyClientEmail" class="label"></label>
-                        <input asp-for="NotifyClientEmail" class="form-control form-control-user" />
+                        <input asp-for="NotifyClientEmail" class="form-control" />
                     </div>
 
                     <div class="form-group">
@@ -45,17 +45,13 @@
         </div>
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Configuración notificaciones</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Dropdowns</h6>
             </div>
             <div class="card-body">
-                The styling for this basic card example is created by using default Bootstrap
-                utility classes. By using utility classes, the style of the card component can be
-                easily modified with no need for any custom CSS!
+                <partial name="/Areas/Admin/Views/Shared/Components/_DeleteBrandComponent.cshtml" />
             </div>
         </div>
     </div>
 
-
     <partial name="/Areas/Admin/Views/Shared/Components/_CreateNewBrandComponent.cshtml" />
-    
 }

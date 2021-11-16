@@ -33,5 +33,6 @@ namespace SSI_WebApp.Data
 
         public DbSet<FixOrder> FixOrders { get; set; }
         public DbSet<ComputerBrand> ComputerBrands { get; set; }
+        public DbSet<RepairOrdersConfig> OrdersConfig { get; set; }
     }
 }

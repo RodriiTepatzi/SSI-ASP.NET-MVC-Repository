@@ -411,3 +411,4 @@ C:\Users\sprno\source\repos\SSI-WebApp\obj\Debug\net5.0\Razor\Areas\Admin\Views\
 C:\Users\sprno\source\repos\SSI-WebApp\obj\Debug\net5.0\Razor\Areas\Admin\Views\Repair\Config.cshtml.g.cs
 C:\Users\sprno\source\repos\SSI-WebApp\obj\Debug\net5.0\Razor\Areas\Admin\Views\Repair\Create.cshtml.g.cs
 C:\Users\sprno\source\repos\SSI-WebApp\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\_CreateNewBrandComponent.cshtml.g.cs
+C:\Users\sprno\source\repos\SSI-WebApp\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\_DeleteBrandComponent.cshtml.g.cs

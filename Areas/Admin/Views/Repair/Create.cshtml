@@ -19,28 +19,28 @@
                 <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
                         <label asp-for="ComputerBrand" class="label"></label>
-                        <select asp-for="ComputerBrand" class="form-control form-control-user" asp-items="ViewBag.Brands"></select>
+                        <select asp-for="ComputerBrand" class="form-control" asp-items="ViewBag.Brands"></select>
                     </div>
                     <div class="col-sm-6">
                         <label asp-for="ComputerModel" class="label"></label>
-                        <input asp-for="ComputerModel" class="form-control form-control-user" />
+                        <input asp-for="ComputerModel" class="form-control" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label asp-for="SerialNumber" class="label"></label>
-                    <input asp-for="SerialNumber" class="form-control form-control-user" />
+                    <input asp-for="SerialNumber" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label asp-for="Price" class="label"></label>
-                    <input asp-for="Price" class="form-control form-control-user" />
+                    <input asp-for="Price" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label asp-for="ReceptionDate" class="label"></label>
-                    <input asp-for="ReceptionDate" class="form-control form-control-user" />
+                    <input asp-for="ReceptionDate" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label asp-for="Notes" class="label"></label>
-                    <textarea asp-for="Notes" class="form-control form-control-user"></textarea>
+                    <textarea asp-for="Notes" class="form-control"></textarea>
                     <span asp-validation-for="Notes" class="text-danger"></span>
                 </div>
                 <div class="form-group">

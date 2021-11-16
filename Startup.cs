@@ -33,6 +33,7 @@ namespace SSI_WebApp
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString"))) ;
 
             services.AddScoped<IFixOrdersService, FixOrdersService>();
+            services.AddScoped<IOrdersConfigService, OrdersConfigService>();
 
             //Authentication and authorization
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();

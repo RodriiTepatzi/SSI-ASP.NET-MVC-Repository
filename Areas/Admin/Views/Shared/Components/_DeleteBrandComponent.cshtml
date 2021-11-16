@@ -1,0 +1,16 @@
+﻿@model DeleteBrandVM
+<form class="user" asp-action="DeleteBrand" asp-controller="Repair">
+    <div class="form-group row">
+        <div>
+            <label class="label">Marcas</label>
+            <select asp-for="Id" class="form-control" asp-items="ViewBag.Brands" id="Brands"></select>
+            <div>
+                <br />
+                <a class="btn btn-circle btn-sm btn-success" href="#" data-toggle="modal" data-target="#newBrandModal">
+                    <i class="fa fa-plus"></i>
+                </a>
+                <button type="submit" class="btn btn-circle btn-sm btn-danger" id="deleteBrandButton"><i class="fa fa-minus"></i></button>
+            </div>
+        </div>
+    </div>
+</form>
