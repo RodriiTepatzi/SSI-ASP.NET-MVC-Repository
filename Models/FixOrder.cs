@@ -35,6 +35,9 @@ namespace SSI_WebApp.Models
 
         [Display(Name = "Precio")]
         public string Price { get; set; }
+        
+        [Display(Name = "Email")]
+        public string Email { get; set; }
 
         //Relationships
         public List<FixOrder_Picture> FixOrder_Pictures { get; set; }
